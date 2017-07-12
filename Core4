@@ -47,16 +47,16 @@
         <!-- Fill in the row for Variables -->
         <tr>
         <td><b>Variables</b></td>
+          <td> something that represents something else</td>
           <td>  </td>
           <td>  </td>
-          <td>  </td>
-          <td>  </td>
+          <td> x = 5</td>
         </tr>
 
         <!-- Fill in the row for Loops -->
         <tr>
           <td><b>Loops</b></td>
-          <td>  </td>
+          <td> A statement that makes the thingy repeat itself  </td>
           <td>  </td>
           <td>  </td>
           <td>  </td>
@@ -65,10 +65,11 @@
         <!-- Fill in the row for Conditionals -->
         <tr>
           <td><b>Conditionals</b></td>
+          <td> A "if...then..." statement </td>
+          <td> Python Example: if user_input == "no":
+    print("you decide to stay in the rocket. Your adventure is over.")  </td>
           <td>  </td>
-          <td>  </td>
-          <td>  </td>
-          <td>  </td>
+          <td> IF you're under the under the influence, THEN, you can't legally drive. </td>
         </tr>
 
         <!-- Fill in the row for Functions -->
