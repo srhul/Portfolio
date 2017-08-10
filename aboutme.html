@@ -140,26 +140,42 @@ function myFunction() {
 </script>
 
 </body>
-</html>
 
-<script language="javascript">
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition( 
 
-var R = 6371; // earth's radius in kilometers (km)
- 
-var dLat = (lat2-lat1).toRad(); // Conversion to radians can also be achieved by lat1 * Math.PI / 180
-var dLon = (lon2-lon1).toRad(); // Conversion to radians can also be achieved by lat1 * Math.PI / 180
- 
-var lat1 = lat1.toRad(); // Conversion to radians can also be achieved by lat1 * Math.PI / 180
-var lat2 = lat2.toRad(); // Conversion to radians can also be achieved by lat2 * Math.PI / 180
- 
-var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
-var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-var d = R * c; // This now holds the distance expressed in km
-    
-</script>
-</html>
-        
+    function (position) {  
+
+    // Did we get the position correctly?
+    // alert (position.coords.latitude);
+
+    // To see everything available in the position.coords array:
+    // for (key in position.coords) {alert(key)}
+
+    alert(position.coords.latitude + ',' + position.coords.longitude);
+
+    }, 
+    // next function is the error callback
+    function (error)
+    {
+        switch(error.code) 
+        {
+            case error.TIMEOUT:
+                alert ('Timeout');
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert ('Position unavailable');
+                break;
+            case error.PERMISSION_DENIED:
+                alert ('Permission denied');
+                break;
+            case error.UNKNOWN_ERROR:
+                alert ('Unknown error');
+                break;
+        }
+    }
+    );
+}        
 
 
 
