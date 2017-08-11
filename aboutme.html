@@ -177,6 +177,25 @@ geocoder.geocode( { 'address': address}, function(results, status) {
 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 // ]]></script>
     </body>
+    <body>
+    polygon = map.drawPolygon({
+  paths: path,
+  strokeColor: '#BBD8E9',
+  strokeOpacity: 1,
+  strokeWeight: 3,
+  fillColor: '#BBD8E9',
+  fillOpacity: 0.6
+});
+map.addMarker({
+  lat:41.58294875812593,
+  lng:-73.04537057876587,
+  draggable: true,
+  fences: [polygon],
+  outside: function(marker, fence) {
+    alert('This marker has been moved outside of its fence');
+  }
+});
+    </body>
 
 
     
