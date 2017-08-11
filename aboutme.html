@@ -141,49 +141,44 @@ function myFunction() {
 
 </body>
 
-if (navigator.geolocation) {
-navigator.geolocation.getCurrentPosition( 
-
-    function (position) {  
-
-    // Did we get the position correctly?
-    // alert (position.coords.latitude);
-
-    // To see everything available in the position.coords array:
-    // for (key in position.coords) {alert(key)}
-
-    alert(position.coords.latitude + ',' + position.coords.longitude);
-
-    }, 
-    // next function is the error callback
-    function (error)
-    {
-        switch(error.code) 
-        {
-            case error.TIMEOUT:
-                alert ('Timeout');
-                break;
-            case error.POSITION_UNAVAILABLE:
-                alert ('Position unavailable');
-                break;
-            case error.PERMISSION_DENIED:
-                alert ('Permission denied');
-                break;
-            case error.UNKNOWN_ERROR:
-                alert ('Unknown error');
-                break;
-        }
+<body>
+<script>
+ var geocoder;
+  var map;
+  function initialize() {
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(-34.397, 150.644);
+    var mapOptions = {
+      zoom: 8,
+      center: latlng
     }
-    );
-}        
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  }
 
+  function codeAddress() {
+    var address = document.getElementById('address').value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == 'OK') {
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
+        });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+  }
 
+<body onload="initialize()">
+ <div id="map" style="width: 320px; height: 480px;"></div>
+  <div>
+    <input id="address" type="textbox" value="Sydney, NSW">
+    <input type="button" value="Encode" onclick="codeAddress()">
+  </div>
+</body>
+    </script>
 
-
-
-
-        
-        
 
 
 
