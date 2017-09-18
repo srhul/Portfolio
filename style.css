@@ -1,17 +1,44 @@
-    #list li {
-display: inline;
-margin: 10px;
-text-align: center;
-   }
+body {
+    background-image: url("https://github.com/Simmi1317/nap-map-app/blob/gh-pages/Background(map).jpg?raw=true");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+form, p, h1, h2{
+    margin-left: 2cm;
+    margin-right: 2cm;
+}
+form {
+  text-align: center;
+  color: white;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-#list a {
-text-decoration: none;
-color: green;
+  margin: -70px 0 0 -170px;
 }
 
-#list {
-background-color: black;
-width:  300px;
-height: 25px;
-border-radius: 5px;
+h1{
+    text-align: center;
+    color: white;
+    font-size: 48px;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    font-size: 36px;
+}
+
+p{
+    text-align: center;
+    color: white;
+    font-size: 24px
 }
