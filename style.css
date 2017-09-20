@@ -1,29 +1,7 @@
 body {
  background-color: #ED4337;
  }
-<html>
-<head>
-<style>
 
-p.serif {
-    font-family: "Courier New", Times, serif;
-}
-
-p {
-    border: 5px solid black ;
-    background-color: white;
-   
-}
-</style>
-</head>
-<body>
-<center>
-
-
-<p class="serif"> Text.</p>
-
-</body>
-</html>
 
 
 
