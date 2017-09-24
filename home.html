@@ -22,6 +22,24 @@ body, html {
 }
 </style>
 </head>
+    
+    <script>
+// First strand of text
+
+window.onload = function(){
+  var theDelay = 5;
+  var timer = setTimeout("showText(RHULE THE WORLD)",theDelay*1000)
+}
+function showText(){
+  document.getElementById("delayedText").style.visibility = "visible";
+}
+</script>
+</head>
+<body>
+<div id="delayedText" style="visibility:hidden">
+This text will appear after 5 seconds
+</div>
+    
 <body>
 
 <div class="bg"></div>
