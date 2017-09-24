@@ -3,7 +3,7 @@
 <head>
 <style>
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "serif";
 }
 
 .sidenav {
