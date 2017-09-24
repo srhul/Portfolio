@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<head>
 <style>
 body {
     font-family: "Lato", sans-serif;
