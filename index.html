@@ -1,115 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-  body {
-    background-color: rgba(255, 99, 71, 0.45)
-    ;
-</style>
-</head>
-<body>
-<div class="bg"></div>
-</body>
-<head>
-<style>
-body {
-    font-family: "serif";
-}
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 99, 71, 0.45);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  
-}
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color:#CC5543;
-    display: block;
-    transition: 0.3s;
-}
-.sidenav a:hover {
-    color: #6D7696;
-}
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
-</head>
-<body>
+  <head>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#"><p><a href="https://what.github.io/Portfolio/home.html">Home</a></p>
-  <a href="#"><p><a href="https://what.github.io/what.github.io/aboutauthor.html">About Author</a></p>
-  <a href="#">Latest Post</a>
-  <a href="#">GWC</a>
+    <!-- Set the style of the table -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
 
-</div>
+    <style>
+      body{
+        color: inherit;
+        font-family: 'Open Sans', sans-serif;
+      }
+      table, th, td{
+        border: 2px solid #01426a;
+        border-collapse: collapse;
+        padding: 15px;
+        text-align: center;
+        vertical-align: middle;
+        color: #01426a
+      }
+      th  {
+        background-color: #ece81a
+      }
+      tr:hover {background-color: #ece81a}
+    </style>
+  </head>
 
-<div id="main">
+  <body>
 
-  <span style="font-size:30px;cursor:pointer;color:green" align="top" onclick="openNav()"><small>&#8594;<small> <small>Navigation<small></span>
-</div>
+    <!-- Table starts here-->
+    <div style ="overflow-x:auto;">
+      <table style="width:90%; margin:1em auto">
 
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "150px";
-    document.getElementById("main").style.marginLeft = "150px";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-}
-</script>
+        <!-- Define the first row of the table -->
+        <tr>
+          <th>Core4 Concept</th>
+          <th>Technical Definition</th>
+          <th>Real-Life Analogy</th>
+          <th>Python Example</th>
+          <th>Scratch Example</th>
+        </tr>
 
-</body>
+        <!-- Fill in the row for Variables -->
+        <tr>
+        <td><b>Variables</b></td>
+          <td>  </td>
+          <td>  </td>
+          <td>  </td>
+          <td>  </td>
+        </tr>
 
-<html>
-<head>
-<style>
+        <!-- Fill in the row for Loops -->
+        <tr>
+          <td><b>Loops</b></td>
+          <td>  </td>
+          <td>  </td>
+          <td>  </td>
+          <td>  </td>
+        </tr>
 
-h1 {
-    text-align:center;
-    font-size: 100px ;
-    text-transform:uppercase;
-    color: ##40e0d0;
-    border: 2px solid;
-    background-color: white;
-    }
-.center {
-    margin:auto;
-    width: 30%;
-    box-shadow: 10px 15px;
+        <!-- Fill in the row for Conditionals -->
+        <tr>
+          <td><b>Conditionals</b></td>
+          <td>  </td>
+          <td>  </td>
+          <td>  </td>
+          <td>  </td>
+        </tr>
 
+        <!-- Fill in the row for Functions -->
+        <tr>
+          <td><b>Functions</b></td>
+          <td>  </td>
+          <td>  </td>
+          <td>  </td>
+          <td>  </td>
+        </tr>
 
-}
-</head>
-</style>
-<html>
-<body>
-<div class="center">
-<h1><b>WHAT?<b></h1>
-</div>
-</body>
+      </table>
+    </div>
+    
+  </body>
 </html>
